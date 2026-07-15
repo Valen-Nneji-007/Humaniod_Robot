@@ -1,0 +1,589 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="human_urdf">
+
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+  <parent link="base_footprint"/>
+  <child link="base_link"/>
+  <origin xyz="0 0 0.08" rpy="3.14159 0 0"/>
+  </joint>
+  
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="6.1619E-08 0.0025013 0.00081305"
+        rpy="0 0 0" />
+      <mass
+        value="0.0046092" />
+      <inertia
+        ixx="4.1497E-07"
+        ixy="-9.5688E-14"
+        ixz="2.9922E-12"
+        iyy="7.1384E-07"
+        iyz="-9.7456E-11"
+        izz="3.187E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <link
+    name="shoulderR_link">
+    <inertial>
+      <origin
+        xyz="0.00037883 -0.0092283 0.0064976"
+        rpy="0 0 0" />
+      <mass
+        value="0.00043205" />
+      <inertia
+        ixx="1.734E-08"
+        ixy="1.263E-10"
+        ixz="-8.2186E-10"
+        iyy="1.5347E-08"
+        iyz="2.1665E-09"
+        izz="3.291E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+
+
+  <joint
+    name="joint_shoulderR"
+    type="revolute">
+    <origin
+      xyz="0.0077756 0.0025 -0.013145"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulderR_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-1.5708"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+
+  <link
+    name="elbowR_link">
+    <inertial>
+      <origin
+        xyz="-0.010086 -0.0015 -0.010143"
+        rpy="0 0 0" />
+      <mass
+        value="0.00047524" />
+      <inertia
+        ixx="1.2989E-08"
+        ixy="-2.2731E-17"
+        ixz="-1.1482E-08"
+        iyy="2.4409E-08"
+        iyz="8.351E-18"
+        izz="1.2859E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_elbowR"
+    type="revolute">
+    <origin
+      xyz="0.0011176 -0.0115 0.01917"
+      rpy="3.1416 0.058237 0" />
+    <parent
+      link="shoulderR_link" />
+    <child
+      link="elbowR_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-0.875"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+
+
+  <link
+    name="shoulderL_link">
+    <inertial>
+      <origin
+        xyz="-0.0047911 -0.0092283 0.0044054"
+        rpy="0 0 0" />
+      <mass
+        value="0.00043205" />
+      <inertia
+        ixx="9.7231E-09"
+        ixy="-1.5975E-09"
+        ixz="7.0474E-09"
+        iyy="1.5347E-08"
+        iyz="1.4689E-09"
+        izz="1.0908E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderL_link.STL" />
+      </geometry>
+    </collision>
+
+
+  </link>
+  <joint
+    name="joint_shoulderL"
+    type="revolute">
+    <origin
+      xyz="-0.0077756 0.0025 -0.013145"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulderL_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-1.5708"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+
+
+  <link
+    name="elbowL_link">
+    <inertial>
+      <origin
+        xyz="-0.010017 -0.0015 0.010211"
+        rpy="0 0 0" />
+      <mass
+        value="0.00047524" />
+      <inertia
+        ixx="1.3144E-08"
+        ixy="1.683E-17"
+        ixz="1.148E-08"
+        iyy="2.4409E-08"
+        iyz="1.4289E-17"
+        izz="1.2704E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowL_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_elbowL"
+    type="revolute">
+    <origin
+      xyz="-0.014135 -0.0115 0.012997"
+      rpy="0 0 3.1416" />
+    <parent
+      link="shoulderL_link" />
+    <child
+      link="elbowL_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-0.942"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+  <link
+    name="neck_link">
+    <inertial>
+      <origin
+        xyz="0.00025028 0.004 -0.011501"
+        rpy="0 0 0" />
+      <mass
+        value="0.0078498" />
+      <inertia
+        ixx="5.37E-07"
+        ixy="2.9708E-23"
+        ixz="9.9049E-09"
+        iyy="4.3754E-07"
+        iyz="-2.5878E-23"
+        izz="5.4124E-07" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/neck_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/neck_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_neck"
+    type="revolute">
+    <origin
+      xyz="0.004 0.0024699 -0.018935"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="neck_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-1.5708"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+  <link
+    name="waistR_link">
+    <inertial>
+      <origin
+        xyz="0.0068854 -0.0025 0.015762"
+        rpy="0 0 0" />
+      <mass
+        value="0.0013009" />
+      <inertia
+        ixx="9.0303E-08"
+        ixy="-1.1619E-14"
+        ixz="-3.5584E-08"
+        iyy="1.0576E-07"
+        iyz="4.8063E-15"
+        izz="2.4388E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_waistR"
+    type="revolute">
+    <origin
+      xyz="0.0125 0.002366 0.021363"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="waistR_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-1.5708"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+  <link
+    name="kneeR_link">
+    <inertial>
+      <origin
+        xyz="0.0081339 -0.0025 -0.012311"
+        rpy="0 0 0" />
+      <mass
+        value="0.00070121" />
+      <inertia
+        ixx="2.7167E-08"
+        ixy="-1.4134E-25"
+        ixz="1.6128E-08"
+        iyy="3.7994E-08"
+        iyz="2.6849E-25"
+        izz="1.4034E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeR_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeR_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_kneeR"
+    type="revolute">
+    <origin
+      xyz="0.013702 0 0.031367"
+      rpy="-3.1416 -0.41185 -3.1416" />
+    <parent
+      link="waistR_link" />
+    <child
+      link="kneeR_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-1.5708"
+        upper="0.75"
+        effort="10"
+        velocity="5" />
+  </joint>
+  <link
+    name="waistL_link">
+    <inertial>
+      <origin
+        xyz="0.0020088 -0.0025 0.01764"
+        rpy="0 0 0" />
+      <mass
+        value="0.0013009" />
+      <inertia
+        ixx="1.0461E-07"
+        ixy="-1.2411E-14"
+        ixz="-1.0905E-08"
+        iyy="1.0576E-07"
+        iyz="1.2626E-15"
+        izz="1.0085E-08" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistL_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_waistL"
+    type="revolute">
+    <origin
+      xyz="-0.0125 0.0025878 0.020855"
+      rpy="0 0 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="waistL_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-1.5708"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+  <link
+    name="kneeL_link">
+    <inertial>
+      <origin
+        xyz="-0.0019132 -0.0025 -0.014449"
+        rpy="0 0 0" />
+      <mass
+        value="0.00070121" />
+      <inertia
+        ixx="3.7413E-08"
+        ixy="-4.1598E-25"
+        ixz="-4.5321E-09"
+        iyy="3.7994E-08"
+        iyz="-3.2616E-24"
+        izz="3.7868E-09" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeL_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeL_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="joint_kneeL"
+    type="revolute">
+    <origin
+      xyz="0.0039601 0 0.034775"
+      rpy="3.1416 -0.11339 -3.1416" />
+    <parent
+      link="waistL_link" />
+    <child
+      link="kneeL_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+        lower="-0.2"
+        upper="1.5708"
+        effort="10"
+        velocity="5" />
+  </joint>
+</robot>

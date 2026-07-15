@@ -1,0 +1,9 @@
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/uninstall.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/human_urdf_uninstall.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/test.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/list_install_components.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/install.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/install/local.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/install/strip.dir

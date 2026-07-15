@@ -1,0 +1,41 @@
+[2.550s] Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf': /usr/bin/cmake /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf
+[3.530s] [0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
+[3.659s]   Compatibility with CMake < 2.8.12 will be removed from a future version of
+[3.773s]   CMake.
+[3.927s] 
+[3.989s]   Update the VERSION argument <min> value or use a ...<max> suffix to tell
+[4.067s]   CMake that the project does not need compatibility with older versions.
+[4.094s] 
+[4.126s] [0m
+[7.695s] -- The C compiler identification is GNU 11.4.0
+[16.073s] -- The CXX compiler identification is GNU 11.4.0
+[21.026s] -- Detecting C compiler ABI info
+[25.857s] -- Detecting C compiler ABI info - done
+[26.009s] -- Check for working C compiler: /usr/bin/cc - skipped
+[26.025s] -- Detecting C compile features
+[26.032s] -- Detecting C compile features - done
+[26.393s] -- Detecting CXX compiler ABI info
+[34.649s] -- Detecting CXX compiler ABI info - done
+[34.982s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[35.001s] -- Detecting CXX compile features
+[35.050s] -- Detecting CXX compile features - done
+[52.692s] [31mCMake Error at CMakeLists.txt:5 (find_package):
+[52.704s]   By not providing "Findcatkin.cmake" in CMAKE_MODULE_PATH this project has
+[52.716s]   asked CMake to find a package configuration file provided by "catkin", but
+[52.744s]   CMake did not find one.
+[52.764s] 
+[52.771s]   Could not find a package configuration file provided by "catkin" with any
+[52.787s]   of the following names:
+[52.799s] 
+[52.803s]     catkinConfig.cmake
+[52.851s]     catkin-config.cmake
+[52.859s] 
+[52.863s]   Add the installation prefix of "catkin" to CMAKE_PREFIX_PATH or set
+[52.886s]   "catkin_DIR" to a directory containing one of the above files.  If "catkin"
+[52.907s]   provides a separate development package or SDK, be sure it has been
+[52.915s]   installed.
+[52.937s] 
+[52.942s] [0m
+[52.953s] -- Configuring incomplete, errors occurred!
+[52.974s] See also "/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/CMakeFiles/CMakeOutput.log".
+[53.023s] Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf' returned '1': /usr/bin/cmake /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf -DCATKIN_INSTALL_INTO_PREFIX_ROOT=0 -DCMAKE_INSTALL_PREFIX=/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf
