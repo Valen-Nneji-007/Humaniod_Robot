@@ -1,0 +1,9 @@
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/uninstall.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/human_controller_uninstall.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/test.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/edit_cache.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/list_install_components.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/install.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/install/local.dir
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/CMakeFiles/install/strip.dir
