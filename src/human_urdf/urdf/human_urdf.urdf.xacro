@@ -1,0 +1,771 @@
+<?xml version="1.0"?>
+
+<robot
+  name="human_urdf"
+  xmlns:xacro="http://ros.org/wiki/xacro">
+
+  <!-- Start GZ or Ignition depending on ROS 2 Version -->
+  <xacro:arg name="is_ignition" default="true"/>
+
+  <!-- Load simulated or Real Hardware Interfaces -->
+  <xacro:arg name="is_sim" default="true"/>
+
+  <!-- Include Gazebo Parameters -->
+  <xacro:include filename="$(find human_urdf)/urdf/human_gazebo.xacro" />
+
+  <!-- Include ros2_control Plugins -->
+  <xacro:include filename="$(find human_urdf)/urdf/human_ros2_control.xacro" />
+
+
+  <!-- ============================================================ -->
+  <!-- BASE FOOTPRINT                                                -->
+  <!-- ============================================================ -->
+
+  <link name="base_footprint"/>
+
+  <joint name="base_footprint_joint" type="fixed">
+    <parent link="base_footprint"/>
+    <child link="base_link"/>
+    <origin xyz="0 0 0.8" rpy="3.14159 0 0"/>
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- BASE LINK                                                      -->
+  <!-- ============================================================ -->
+
+  <link name="base_link">
+
+    <inertial>
+      <origin
+        xyz="6.1619E-07 0.025013 0.0081305"
+        rpy="0 0 0" />
+
+      <mass value="4.6092" />
+
+      <inertia
+        ixx="0.041497"
+        ixy="-9.5688E-09"
+        ixz="2.9922E-07"
+        iyy="0.071384"
+        iyz="-9.7456E-06"
+        izz="0.03187" />
+    </inertial>
+
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/base_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/base_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <!-- ============================================================ -->
+  <!-- RIGHT SHOULDER                                                 -->
+  <!-- ============================================================ -->
+
+  <link name="shoulderR_link">
+
+    <inertial>
+      <origin
+        xyz="0.0037883 -0.092283 0.064976"
+        rpy="0 0 0" />
+
+      <mass value="0.43205" />
+
+      <inertia
+        ixx="0.001734"
+        ixy="1.263E-05"
+        ixz="-8.2186E-05"
+        iyy="0.0015347"
+        iyz="0.00021665"
+        izz="0.0003291" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_shoulderR" type="revolute">
+
+    <origin
+      xyz="0.077756 0.025 -0.13145"
+      rpy="0 0 1.5708" />
+
+    <parent link="base_link"/>
+    <child link="shoulderR_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- RIGHT ELBOW                                                    -->
+  <!-- ============================================================ -->
+
+  <link name="elbowR_link">
+
+    <inertial>
+      <origin
+        xyz="-0.10086 -0.015 -0.10143"
+        rpy="0 0 0" />
+
+      <mass value="0.47524" />
+
+      <inertia
+        ixx="0.0012989"
+        ixy="-2.2731E-12"
+        ixz="-0.0011482"
+        iyy="0.0024409"
+        iyz="8.351E-13"
+        izz="0.0012859" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_elbowR" type="revolute">
+
+    <origin
+      xyz="0.011176 -0.115 0.1917"
+      rpy="3.1416 0.058237 0" />
+
+    <parent link="shoulderR_link"/>
+    <child link="elbowR_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-0.875"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- LEFT SHOULDER                                                  -->
+  <!-- ============================================================ -->
+
+  <link name="shoulderL_link">
+
+    <inertial>
+      <origin
+        xyz="-0.047911 -0.092283 0.044054"
+        rpy="0 0 0" />
+
+      <mass value="0.43205" />
+
+      <inertia
+        ixx="0.00097231"
+        ixy="-0.00015975"
+        ixz="0.00070474"
+        iyy="0.0015347"
+        iyz="0.00014689"
+        izz="0.0010908" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/shoulderL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_shoulderL" type="revolute">
+
+    <origin
+      xyz="-0.077756 0.025 -0.13145"
+      rpy="0 0 -1.5708" />
+
+    <parent link="base_link"/>
+    <child link="shoulderL_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- LEFT ELBOW                                                     -->
+  <!-- ============================================================ -->
+
+  <link name="elbowL_link">
+
+    <inertial>
+      <origin
+        xyz="-0.10017 -0.015 0.10211"
+        rpy="0 0 0" />
+
+      <mass value="0.47524" />
+
+      <inertia
+        ixx="0.0013144"
+        ixy="1.683E-12"
+        ixz="0.001148"
+        iyy="0.0024409"
+        iyz="1.4289E-12"
+        izz="0.0012704" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/elbowL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_elbowL" type="revolute">
+
+    <origin
+      xyz="-0.14135 -0.115 0.12997"
+      rpy="0 0 3.1416" />
+
+    <parent link="shoulderL_link"/>
+    <child link="elbowL_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-0.942"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- NECK                                                           -->
+  <!-- ============================================================ -->
+
+  <link name="neck_link">
+
+    <inertial>
+      <origin
+        xyz="0.0025028 0.04 -0.11501"
+        rpy="0 0 0" />
+
+      <mass value="7.8498" />
+
+      <inertia
+        ixx="0.0537"
+        ixy="2.9708E-18"
+        ixz="0.00099049"
+        iyy="0.043754"
+        iyz="-2.5878E-18"
+        izz="0.054124" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/neck_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/neck_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_neck" type="revolute">
+
+    <origin
+      xyz="0.04 0.024699 -0.18935"
+      rpy="0 0 1.5708" />
+
+    <parent link="base_link"/>
+    <child link="neck_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- RIGHT WAIST                                                    -->
+  <!-- ============================================================ -->
+
+  <link name="waistR_link">
+
+    <inertial>
+      <origin
+        xyz="0.068854 -0.025 0.15762"
+        rpy="0 0 0" />
+
+      <mass value="1.3009" />
+
+      <inertia
+        ixx="0.0090303"
+        ixy="-1.1619E-09"
+        ixz="-0.0035584"
+        iyy="0.010576"
+        iyz="4.8063E-10"
+        izz="0.0024388" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_waistR" type="revolute">
+
+    <origin
+      xyz="0.125 0.02366 0.21363"
+      rpy="0 0 -1.5708" />
+
+    <parent link="base_link"/>
+    <child link="waistR_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- RIGHT KNEE                                                     -->
+  <!-- ============================================================ -->
+
+  <link name="kneeR_link">
+
+    <inertial>
+      <origin
+        xyz="0.081339 -0.025 -0.12311"
+        rpy="0 0 0" />
+
+      <mass value="0.70121" />
+
+      <inertia
+        ixx="0.0027167"
+        ixy="-1.4134E-20"
+        ixz="0.0016128"
+        iyy="0.0037994"
+        iyz="2.6849E-20"
+        izz="0.0014034" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeR_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_kneeR" type="revolute">
+
+    <origin
+      xyz="0.13702 0 0.31367"
+      rpy="-3.1416 -0.41185 -3.1416" />
+
+    <parent link="waistR_link"/>
+    <child link="kneeR_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-1.5708"
+      upper="0.75"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- LEFT WAIST                                                     -->
+  <!-- ============================================================ -->
+
+  <link name="waistL_link">
+
+    <inertial>
+      <origin
+        xyz="0.020088 -0.025 0.1764"
+        rpy="0 0 0" />
+
+      <mass value="1.3009" />
+
+      <inertia
+        ixx="0.010461"
+        ixy="-1.2411E-09"
+        ixz="-0.0010905"
+        iyy="0.010576"
+        iyz="1.2626E-10"
+        izz="0.0010085" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/waistL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_waistL" type="revolute">
+
+    <origin
+      xyz="-0.125 0.025878 0.20855"
+      rpy="0 0 1.5708" />
+
+    <parent link="base_link"/>
+    <child link="waistL_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+  <!-- ============================================================ -->
+  <!-- LEFT KNEE                                                      -->
+  <!-- ============================================================ -->
+
+  <link name="kneeL_link">
+
+    <inertial>
+      <origin
+        xyz="-0.019132 -0.025 -0.14449"
+        rpy="0 0 0" />
+
+      <mass value="0.70121" />
+
+      <inertia
+        ixx="0.0037413"
+        ixy="-4.1598E-20"
+        ixz="-0.00045321"
+        iyy="0.0037994"
+        iyz="-3.2616E-19"
+        izz="0.00037868" />
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+
+      <material name="">
+        <color rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0" />
+
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/kneeL_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+
+  </link>
+
+
+  <joint name="joint_kneeL" type="revolute">
+
+    <origin
+      xyz="0.039601 0 0.34775"
+      rpy="3.1416 -0.11339 -3.1416" />
+
+    <parent link="waistL_link"/>
+    <child link="kneeL_link"/>
+
+    <axis xyz="0 1 0"/>
+
+    <limit
+      lower="-0.2"
+      upper="1.5708"
+      effort="10"
+      velocity="5" />
+
+  </joint>
+
+
+
+  <link name="camera_left_link">
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    <geometry>
+      <sphere radius="0.04"/>
+    </geometry>
+
+    <material name="camera_left_material">
+      <color rgba="0.05 0.05 0.05 1"/>
+    </material>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    <geometry>
+      <sphere radius="0.04"/>
+    </geometry>
+  </collision>
+
+</link>
+
+
+
+<link name="camera_right_link">
+
+  <visual>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    <geometry>
+      <sphere radius="0.04"/>
+    </geometry>
+
+    <material name="camera_right_material">
+      <color rgba="0.05 0.05 0.05 1"/>
+    </material>
+  </visual>
+
+  <collision>
+    <origin xyz="0 0 0" rpy="0 0 0"/>
+
+    <geometry>
+      <sphere radius="0.04"/>
+    </geometry>
+  </collision>
+
+</link>
+
+<joint name="camera_left_joint" type="fixed">
+  <parent link="neck_link"/>
+  <child link="camera_left_link"/>
+  <origin xyz="-0.1 0.08 -0.12" rpy="0 0 0"/>
+</joint>
+
+<joint name="camera_right_joint" type="fixed">
+  <parent link="neck_link"/>
+  <child link="camera_right_link"/>
+  <origin xyz="-0.1 -0.03 -0.12" rpy="0 0 0"/>
+</joint>
+
+
+</robot>

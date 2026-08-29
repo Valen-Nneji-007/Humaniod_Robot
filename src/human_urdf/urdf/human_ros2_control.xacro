@@ -1,8 +1,8 @@
 <?xml version="1.0"?>
 
-<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="RobPrincewill">
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="human_urdf">
 
-    <ros2_control type="system" name="RobPrincewill">
+    <ros2_control type="system" name="human_urdf">
         
         <!-- Gazebo hardware interface -->
         <hardware>
@@ -117,7 +117,7 @@
                 <!-- Left leg                 -->
         <!-- ========================= -->
 
-        <joint name="joint_wasitL">
+        <joint name="joint_waistL">
 
             <command_interface name="position">
                 <param name="min">-1.5708</param>

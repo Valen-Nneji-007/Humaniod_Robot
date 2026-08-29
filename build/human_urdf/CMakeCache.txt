@@ -37,9 +37,6 @@ AMENT_TEST_RESULTS_DIR:PATH=/mnt/c/Users/Administrator/Documents/Mechanical/Huma
 //Build the testing tree.
 BUILD_TESTING:BOOL=ON
 
-//No help, variable specified on the command line.
-CATKIN_INSTALL_INTO_PREFIX_ROOT:UNINITIALIZED=0
-
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 
@@ -288,9 +285,6 @@ ament_cmake_test_DIR:PATH=/opt/ros/humble/share/ament_cmake_test/cmake
 
 //The directory containing a CMake configuration file for ament_cmake_version.
 ament_cmake_version_DIR:PATH=/opt/ros/humble/share/ament_cmake_version/cmake
-
-//The directory containing a CMake configuration file for catkin.
-catkin_DIR:PATH=catkin_DIR-NOTFOUND
 
 //Value Computed by CMake
 human_urdf_BINARY_DIR:STATIC=/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf

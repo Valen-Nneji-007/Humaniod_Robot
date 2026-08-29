@@ -1,3 +1,4 @@
 {
-    "cmake.sourceDirectory": "C:/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf"
+    "cmake.sourceDirectory": "C:/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf",
+    "github.copilot.chat.codeGeneration.useInstructionFiles": true
 }

@@ -43,6 +43,13 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/human_controller" TYPE DIRECTORY FILES
+    "/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_controller/config"
+    "/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_controller/launch"
+    )
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ament_index/resource_index/package_run_dependencies" TYPE FILE FILES "/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/human_controller")
 endif()
 
