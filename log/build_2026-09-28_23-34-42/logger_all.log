@@ -1,0 +1,219 @@
+[0.379s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build']
+[0.379s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=False, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=8, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, mixin_files=None, mixin=None, verb_parser=<colcon_mixin.mixin.mixin_argument.MixinArgumentDecorator object at 0x74f4a0a909a0>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x74f4a0a903d0>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x74f4a0a903d0>>, mixin_verb=('build',))
+[0.459s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.460s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.461s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.463s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.464s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.465s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.466s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod'
+[0.469s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.470s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.471s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.472s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.473s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.474s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.475s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.476s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.477s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.498s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.499s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.501s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.502s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.503s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.507s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.508s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.511s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.514s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.515s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.517s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.521s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.522s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.523s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.527s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.529s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.530s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.531s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.532s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.533s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.534s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.535s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.539s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.540s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.541s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.544s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.545s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.550s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extensions ['ignore', 'ignore_ament_install']
+[0.551s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'ignore'
+[0.553s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'ignore_ament_install'
+[0.556s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extensions ['colcon_pkg']
+[0.557s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'colcon_pkg'
+[0.559s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extensions ['colcon_meta']
+[0.560s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'colcon_meta'
+[0.562s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extensions ['ros']
+[0.563s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'ros'
+[0.568s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extensions ['cmake', 'python']
+[0.569s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'cmake'
+[0.571s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'python'
+[0.573s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extensions ['python_setup_py']
+[0.574s] Level 1:colcon.colcon_core.package_identification:_identify(src/files) by extension 'python_setup_py'
+[0.585s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extensions ['ignore', 'ignore_ament_install']
+[0.586s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extension 'ignore'
+[0.590s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extension 'ignore_ament_install'
+[0.596s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extensions ['colcon_pkg']
+[0.600s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extension 'colcon_pkg'
+[0.630s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extensions ['colcon_meta']
+[0.643s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extension 'colcon_meta'
+[0.661s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extensions ['ros']
+[0.664s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_controller) by extension 'ros'
+[0.744s] DEBUG:colcon.colcon_core.package_identification:Package 'src/human_controller' with type 'ros.ament_cmake' and name 'human_controller'
+[0.749s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extensions ['ignore', 'ignore_ament_install']
+[0.750s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extension 'ignore'
+[0.753s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extension 'ignore_ament_install'
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extensions ['colcon_pkg']
+[0.755s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extension 'colcon_pkg'
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extensions ['colcon_meta']
+[0.757s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extension 'colcon_meta'
+[0.759s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extensions ['ros']
+[0.760s] Level 1:colcon.colcon_core.package_identification:_identify(src/human_urdf) by extension 'ros'
+[0.772s] DEBUG:colcon.colcon_core.package_identification:Package 'src/human_urdf' with type 'ros.ament_cmake' and name 'human_urdf'
+[0.773s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.774s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.774s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.775s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.775s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.812s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.813s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.874s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 2 installed packages in /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install
+[0.878s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 489 installed packages in /opt/ros/humble
+[0.881s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[1.042s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'cmake_args' from command line to 'None'
+[1.043s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'cmake_target' from command line to 'None'
+[1.044s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.045s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'cmake_clean_cache' from command line to 'False'
+[1.046s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'cmake_clean_first' from command line to 'False'
+[1.046s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'cmake_force_configure' from command line to 'False'
+[1.047s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'ament_cmake_args' from command line to 'None'
+[1.048s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'catkin_cmake_args' from command line to 'None'
+[1.048s] Level 5:colcon.colcon_core.verb:set package 'human_controller' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.049s] DEBUG:colcon.colcon_core.verb:Building package 'human_controller' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller', 'merge_install': False, 'path': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_controller', 'symlink_install': False, 'test_result_base': None}
+[1.051s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'cmake_args' from command line to 'None'
+[1.053s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'cmake_target' from command line to 'None'
+[1.054s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[1.054s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'cmake_clean_cache' from command line to 'False'
+[1.056s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'cmake_clean_first' from command line to 'False'
+[1.057s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'cmake_force_configure' from command line to 'False'
+[1.058s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'ament_cmake_args' from command line to 'None'
+[1.059s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'catkin_cmake_args' from command line to 'None'
+[1.059s] Level 5:colcon.colcon_core.verb:set package 'human_urdf' build argument 'catkin_skip_building_tests' from command line to 'False'
+[1.060s] DEBUG:colcon.colcon_core.verb:Building package 'human_urdf' with the following arguments: {'ament_cmake_args': None, 'build_base': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf', 'merge_install': False, 'path': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf', 'symlink_install': False, 'test_result_base': None}
+[1.061s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.064s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.065s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_controller' with build type 'ament_cmake'
+[1.066s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_controller'
+[1.075s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.076s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.077s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.155s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf' with build type 'ament_cmake'
+[1.157s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf'
+[1.158s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.159s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.297s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller -- -j8 -l8
+[1.337s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf -- -j8 -l8
+[1.423s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller -- -j8 -l8
+[1.472s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller
+[1.475s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf -- -j8 -l8
+[1.506s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf
+[2.113s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(human_controller)
+[2.118s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller
+[2.120s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller' for CMake module files
+[2.233s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller' for CMake config files
+[2.381s] Level 1:colcon.colcon_core.shell:create_environment_hook('human_controller', 'cmake_prefix_path')
+[2.382s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/hook/cmake_prefix_path.ps1'
+[2.409s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/hook/cmake_prefix_path.dsv'
+[2.429s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/hook/cmake_prefix_path.sh'
+[2.455s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/bin'
+[2.457s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/lib/pkgconfig/human_controller.pc'
+[2.461s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/lib/python3.10/site-packages'
+[2.464s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/bin'
+[2.468s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.ps1'
+[2.489s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.dsv'
+[2.512s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.sh'
+[2.530s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.bash'
+[2.545s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.zsh'
+[2.563s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/colcon-core/packages/human_controller)
+[2.612s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(human_controller)
+[2.614s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller' for CMake module files
+[2.723s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller' for CMake config files
+[2.963s] Level 1:colcon.colcon_core.shell:create_environment_hook('human_controller', 'cmake_prefix_path')
+[2.965s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/hook/cmake_prefix_path.ps1'
+[2.982s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/hook/cmake_prefix_path.dsv'
+[2.999s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/hook/cmake_prefix_path.sh'
+[3.022s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/bin'
+[3.024s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/lib/pkgconfig/human_controller.pc'
+[3.027s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/lib/python3.10/site-packages'
+[3.029s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/bin'
+[3.031s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.ps1'
+[3.046s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.dsv'
+[3.059s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.sh'
+[3.073s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.bash'
+[3.088s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.zsh'
+[3.101s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/colcon-core/packages/human_controller)
+[3.315s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(human_urdf)
+[3.317s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf' for CMake module files
+[3.318s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf
+[3.441s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf' for CMake config files
+[3.551s] Level 1:colcon.colcon_core.shell:create_environment_hook('human_urdf', 'cmake_prefix_path')
+[3.552s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/hook/cmake_prefix_path.ps1'
+[3.564s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/hook/cmake_prefix_path.dsv'
+[3.578s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/hook/cmake_prefix_path.sh'
+[3.595s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib'
+[3.602s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/bin'
+[3.604s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/pkgconfig/human_urdf.pc'
+[3.607s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/python3.10/site-packages'
+[3.610s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/bin'
+[3.612s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.ps1'
+[3.625s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.dsv'
+[3.644s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.sh'
+[3.662s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.bash'
+[3.677s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.zsh'
+[3.692s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/colcon-core/packages/human_urdf)
+[3.719s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(human_urdf)
+[3.721s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf' for CMake module files
+[3.859s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf' for CMake config files
+[3.968s] Level 1:colcon.colcon_core.shell:create_environment_hook('human_urdf', 'cmake_prefix_path')
+[3.970s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/hook/cmake_prefix_path.ps1'
+[3.985s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/hook/cmake_prefix_path.dsv'
+[4.010s] INFO:colcon.colcon_core.shell:Creating environment hook '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/hook/cmake_prefix_path.sh'
+[4.041s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib'
+[4.046s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/bin'
+[4.048s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/pkgconfig/human_urdf.pc'
+[4.050s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/python3.10/site-packages'
+[4.053s] Level 1:colcon.colcon_core.environment:checking '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/bin'
+[4.056s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.ps1'
+[4.071s] INFO:colcon.colcon_core.shell:Creating package descriptor '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.dsv'
+[4.083s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.sh'
+[4.098s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.bash'
+[4.115s] INFO:colcon.colcon_core.shell:Creating package script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.zsh'
+[4.130s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/colcon-core/packages/human_urdf)
+[4.142s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[4.143s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[4.144s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[4.144s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[4.265s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.notify_send': Could not find 'notify-send'
+[4.266s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[4.266s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[4.267s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[4.269s] DEBUG:colcon.colcon_notification.desktop_notification.notify2:Failed to initialize notify2: org.freedesktop.DBus.Error.ServiceUnknown: The name org.freedesktop.Notifications was not provided by any .service files
+[4.271s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[4.272s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/local_setup.ps1'
+[4.279s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/_local_setup_util_ps1.py'
+[4.289s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/setup.ps1'
+[4.320s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/local_setup.sh'
+[4.326s] INFO:colcon.colcon_core.shell:Creating prefix util module '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/_local_setup_util_sh.py'
+[4.334s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/setup.sh'
+[4.359s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/local_setup.bash'
+[4.367s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/setup.bash'
+[4.390s] INFO:colcon.colcon_core.shell:Creating prefix script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/local_setup.zsh'
+[4.397s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/setup.zsh'

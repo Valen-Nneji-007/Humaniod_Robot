@@ -25,7 +25,7 @@ AMENT_CMAKE_ENVIRONMENT_PARENT_PREFIX_PATH_GENERATION:BOOL=ON
 
 //Replace the CMake install command with a custom implementation
 // using symlinks instead of copying resources
-AMENT_CMAKE_SYMLINK_INSTALL:BOOL=OFF
+AMENT_CMAKE_SYMLINK_INSTALL:BOOL=1
 
 //Generate an uninstall target to revert the effects of the install
 // step
@@ -51,7 +51,7 @@ CMAKE_BUILD_TYPE:STRING=
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+CMAKE_CXX_COMPILER:FILEPATH=/usr/lib/ccache/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -77,7 +77,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+CMAKE_C_COMPILER:FILEPATH=/usr/lib/ccache/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -295,6 +295,9 @@ human_urdf_IS_TOP_LEVEL:STATIC=ON
 //Value Computed by CMake
 human_urdf_SOURCE_DIR:STATIC=/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf
 
+//The directory containing a CMake configuration file for rclpy.
+rclpy_DIR:PATH=/opt/ros/humble/share/rclpy/cmake
+
 
 ########################
 # INTERNAL cache entries
@@ -449,4 +452,6 @@ _Python3_EXECUTABLE:INTERNAL=/usr/bin/python3
 //Python3 Properties
 _Python3_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;12;64;;cpython-310-x86_64-linux-gnu;/usr/lib/python3.10;/usr/lib/python3.10;/usr/lib/python3/dist-packages;/usr/lib/python3/dist-packages
 _Python3_INTERPRETER_SIGNATURE:INTERNAL=0f3e53742e142b1d9e50e4ca5b901dd8
+//Index for unique symlink install targets
+__AMENT_CMAKE_SYMLINK_INSTALL_TARGETS_INDEX:INTERNAL=0
 

@@ -1,0 +1,53 @@
+[0.338s] Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf -- -j8 -l8
+[0.649s] -- Found ament_cmake: 1.3.14 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.974s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.194s] -- Found rclpy: 3.3.21 (/opt/ros/humble/share/rclpy/cmake)
+[2.334s] -- Configuring done
+[2.764s] -- Generating done
+[2.973s] -- Build files have been written to: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf
+[3.017s] Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf -- -j8 -l8
+[3.058s] Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf
+[3.075s] -- Install configuration: ""
+[3.096s] -- Execute custom install script
+[3.125s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/human_urdf/walk2.py
+[3.160s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/human_urdf/walk.py
+[3.170s] -- Symlinking: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/human_urdf/gait_generator.py
+[3.248s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/config/joint_names_human_urdf.yaml
+[3.303s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/launch/display.launch
+[3.351s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/launch/display.launch.py
+[3.390s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/launch/gazebo.launch.py
+[3.491s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripL1_link.STL
+[3.523s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripL2_link.STL
+[3.558s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripR1_link.STL
+[3.588s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripR2_link.STL
+[3.615s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/base_link.STL
+[3.656s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/elbowL_link.STL
+[3.724s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/elbowR_link.STL
+[3.776s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/kneeL_link.STL
+[3.803s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/kneeR_link.STL
+[3.831s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/neck_link.STL
+[3.873s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/shoulderL_link.STL
+[3.907s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/shoulderR_link.STL
+[3.936s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/waistL_link.STL
+[3.974s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/waistR_link.STL
+[4.028s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_gazebo.xacro
+[4.061s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_ros2_control.xacro
+[4.101s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_urdf.csv
+[4.137s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_urdf.urdf.xacro
+[4.189s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/worlds/empty.sdf
+[4.232s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/ament_index/resource_index/package_run_dependencies/human_urdf
+[4.280s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/ament_index/resource_index/parent_prefix_path/human_urdf
+[4.299s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/ament_prefix_path.sh
+[4.323s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/ament_prefix_path.dsv
+[4.360s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/path.sh
+[4.399s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/path.dsv
+[4.424s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.bash
+[4.448s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.sh
+[4.480s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.zsh
+[4.509s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.dsv
+[4.522s] -- Symlinking: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.dsv
+[4.617s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/ament_index/resource_index/packages/human_urdf
+[4.646s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/cmake/human_urdfConfig.cmake
+[4.674s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/cmake/human_urdfConfig-version.cmake
+[4.702s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.xml
+[4.708s] Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf

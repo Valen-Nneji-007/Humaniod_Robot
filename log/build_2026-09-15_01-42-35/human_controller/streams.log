@@ -1,0 +1,23 @@
+[0.254s] Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller -- -j8 -l8
+[0.691s] Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller -- -j8 -l8
+[0.793s] Invoking command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller
+[0.807s] -- Install configuration: ""
+[0.858s] -- Execute custom install script
+[1.052s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/config/human_controllers.yaml
+[1.205s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/launch/controller.launch.py
+[1.635s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/ament_index/resource_index/package_run_dependencies/human_controller
+[2.021s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/ament_index/resource_index/parent_prefix_path/human_controller
+[2.362s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/environment/ament_prefix_path.sh
+[2.640s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/environment/ament_prefix_path.dsv
+[2.751s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/environment/path.sh
+[2.849s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/environment/path.dsv
+[2.868s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/local_setup.bash
+[2.945s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/local_setup.sh
+[2.993s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/local_setup.zsh
+[3.065s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/local_setup.dsv
+[3.127s] -- Symlinking: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.dsv
+[3.424s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/ament_index/resource_index/packages/human_controller
+[3.478s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/cmake/human_controllerConfig.cmake
+[3.525s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/cmake/human_controllerConfig-version.cmake
+[3.576s] -- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller/share/human_controller/package.xml
+[3.609s] Invoked command in '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_controller

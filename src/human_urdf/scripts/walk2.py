@@ -1,133 +1,160 @@
 #!/usr/bin/env python3
+"""
+walk_gait_node.py
+==================
 
-import math
+Thin ROS2 wrapper around gait_generator.py. Publishes a repeating
+JointTrajectory to your `body_controller`, one full gait cycle at a
+time, re-sending the next cycle just before the current one finishes
+so the walk continues indefinitely.
+
+`body_controller` covers your WHOLE robot (confirmed via
+`ros2 topic echo /joint_states --once`) -- arms, neck, grippers, and
+legs together -- and JointTrajectoryController rejects any message
+that doesn't name every one of its configured joints. So every
+message this node sends includes all 13 joints: the 4 leg joints
+follow the gait from gait_generator.py, and everything else
+(shoulders, elbows, neck, grippers) is held at a fixed neutral
+position (see NEUTRAL_POSE below -- edit those if you want the arms
+resting somewhere other than straight down / grippers somewhere other
+than closed).
+
+--------------------------------------------------------------------
+BEFORE RUNNING -- confirm your actual controller name/topic
+--------------------------------------------------------------------
+    ros2 control list_controllers
+
+If your controller isn't named `body_controller`, either:
+  (a) change TRAJ_TOPIC below to match, e.g.
+      "/leg_controller/joint_trajectory", or
+  (b) pass it at launch: --ros-args -p traj_topic:=/your/topic
+
+If your controller's joint list differs from ALL_JOINTS below (e.g.
+you split it into separate arm/leg controllers later), update
+ALL_JOINTS and NEUTRAL_POSE to match -- run
+`ros2 topic echo /joint_states --once` again and copy the `name:`
+list exactly, including any `_mimic` suffixes.
+
+--------------------------------------------------------------------
+RUNNING
+--------------------------------------------------------------------
+    ros2 run <your_package> walk_gait_node.py
+    # or directly, if this file is executable and ROS2 is sourced:
+    ./walk_gait_node.py
+
+Stop it (Ctrl+C) and the last trajectory segment will simply finish
+executing -- there's no "stop" trajectory sent automatically. Add one
+if you want it to freeze in place immediately instead.
+"""
 
 import rclpy
 from rclpy.node import Node
+from rclpy.duration import Duration
 from trajectory_msgs.msg import JointTrajectory, JointTrajectoryPoint
 
+from gait_generator import GaitParams, JOINT_NAMES, sample_cycle
 
-class WalkingController(Node):
-    """
-    Simple sinusoidal CPG (central pattern generator) gait.
+TRAJ_TOPIC = "/body_controller/joint_trajectory"
 
-    Legs move in opposite phase; knees fold only during that leg's forward
-    swing. Arms swing opposite the same-side leg (contralateral coordination),
-    which is the main visual cue that reads as "human" rather than "robot".
-    A short startup ramp eases the amplitude in from zero instead of snapping
-    straight to full stride.
-    """
+# Exact joint list `body_controller` commands, taken directly from
+# human_controllers.yaml (src/human_controller/config/human_controllers.yaml).
+# Confirmed: grippers are NOT part of this controller at all (handled
+# elsewhere), and `allow_partial_joints_goal: false` means every message
+# must contain exactly these 9 joints, no more, no less.
+ALL_JOINTS = [
+    "joint_shoulderR", "joint_elbowR", "joint_shoulderL", "joint_elbowL",
+    "joint_neck", "joint_waistR", "joint_kneeR", "joint_waistL", "joint_kneeL",
+]
 
+# Fixed position (rad) for every joint this gait doesn't animate. All zeros
+# is a safe default -- within every joint's <limit> range in your URDF --
+# but feel free to change these (e.g. a small elbow bend) once walking works.
+NEUTRAL_POSE = {name: 0.0 for name in ALL_JOINTS if name not in JOINT_NAMES}
+
+
+class WalkGaitNode(Node):
     def __init__(self):
-        super().__init__('walking_controller')
+        super().__init__("walk_gait_node")
 
-        self.publisher = self.create_publisher(
-            JointTrajectory,
-            '/body_controller/joint_trajectory',
-            10
+        # Expose every gait parameter via ROS2 params so you can tune live with
+        # `ros2 param set` instead of editing/rebuilding, e.g.:
+        #   ros2 param set /walk_gait_node cycle_period 6.0
+        self.declare_parameter("traj_topic", TRAJ_TOPIC)
+        self.declare_parameter("cycle_period", 4.0)
+        self.declare_parameter("duty_factor", 0.8)
+        self.declare_parameter("hip_swing_amp", 0.28)
+        self.declare_parameter("knee_neutral", 0.12)
+        self.declare_parameter("knee_lift_R", 0.30)
+        self.declare_parameter("knee_lift_L", 0.06)
+        self.declare_parameter("samples_per_cycle", 40)
+        # how long before a cycle ends to send the next one, so the
+        # controller always has a queued segment (avoids any gap/stall)
+        self.declare_parameter("resend_lead_time", 0.3)
+
+        topic = self.get_parameter("traj_topic").value
+        self.pub = self.create_publisher(JointTrajectory, topic, 10)
+        self.get_logger().info(f"Publishing walk gait to: {topic}")
+        self.get_logger().info(f"Full joint set ({len(ALL_JOINTS)}): {ALL_JOINTS}")
+
+        self._build_params()
+        self._publish_cycle()
+
+        resend_period = max(0.5, self.params.cycle_period - self.get_parameter("resend_lead_time").value)
+        self.timer = self.create_timer(resend_period, self._publish_cycle)
+
+    def _build_params(self):
+        self.params = GaitParams(
+            cycle_period=self.get_parameter("cycle_period").value,
+            duty_factor=self.get_parameter("duty_factor").value,
+            hip_swing_amp=self.get_parameter("hip_swing_amp").value,
+            knee_neutral=self.get_parameter("knee_neutral").value,
+            knee_lift_R=self.get_parameter("knee_lift_R").value,
+            knee_lift_L=self.get_parameter("knee_lift_L").value,
         )
+        self.n_samples = self.get_parameter("samples_per_cycle").value
 
-        self.joints = [
-            'joint_shoulderR',
-            'joint_elbowR',
-            'joint_shoulderL',
-            'joint_elbowL',
-            'joint_neck',
-            'joint_waistR',
-            'joint_kneeR',
-            'joint_waistL',
-            'joint_kneeL'
-        ]
+    def _full_positions(self, angles, i):
+        """Build a position list covering ALL_JOINTS: leg joints from the
+        gait sample at index i, everything else held at NEUTRAL_POSE."""
+        row = dict(NEUTRAL_POSE)
+        for name in JOINT_NAMES:
+            row[name] = float(angles[name][i])
+        return [row[name] for name in ALL_JOINTS]
 
-        # Gait parameters - tune live without touching code, e.g.:
-        #   ros2 param set /walking_controller step_period 1.2
-        self.declare_parameter('step_period', 4.0)       # seconds per full stride
-        self.declare_parameter('hip_amplitude', 0.20)    # rad
-        self.declare_parameter('knee_amplitude', 0.35)   # rad
-        self.declare_parameter('arm_amplitude', 0.30)    # rad
-        self.declare_parameter('elbow_amplitude', 0.15)  # rad
-        self.declare_parameter('ramp_up_time', 2.0)      # seconds to reach full stride
-
-        self.dt = 0.1
-        self.timer = self.create_timer(self.dt, self.walk)
-
-        self.t = 0.0        # phase clock, wrapped to [0, step_period)
-        self.elapsed = 0.0  # unwrapped clock, used only for the startup ramp
-
-    @staticmethod
-    def _smoothstep(x):
-        x = max(0.0, min(1.0, x))
-        return x * x * (3.0 - 2.0 * x)
-
-    def walk(self):
-
-        step_period = self.get_parameter('step_period').value
-        hip_amplitude = self.get_parameter('hip_amplitude').value
-        knee_amplitude = self.get_parameter('knee_amplitude').value
-        arm_amplitude = self.get_parameter('arm_amplitude').value
-        elbow_amplitude = self.get_parameter('elbow_amplitude').value
-        ramp_up_time = self.get_parameter('ramp_up_time').value
-
-        phase = 2.0 * math.pi * (self.t / step_period)
-        ramp = self._smoothstep(self.elapsed / ramp_up_time) if ramp_up_time > 0.0 else 1.0
-        sin_p = math.sin(phase)
-
-        # Legs: opposite phase. Squaring the clamped sine keeps the same
-        # peak knee bend as before but removes the velocity kink that a
-        # bare max(0, sin(...)) has at each swing transition.
-        waistR = ramp * hip_amplitude * sin_p
-        waistL = -waistR
-        kneeR = ramp * knee_amplitude * max(0.0, sin_p) ** 2
-        kneeL = ramp * knee_amplitude * max(0.0, -sin_p) ** 2
-
-        # Arms: swing opposite the same-side leg, with a little elbow
-        # bend on the backswing.
-        shoulderR = -ramp * arm_amplitude * sin_p
-        shoulderL = ramp * arm_amplitude * sin_p
-        elbowR = ramp * elbow_amplitude * max(0.0, sin_p) ** 2
-        elbowL = ramp * elbow_amplitude * max(0.0, -sin_p) ** 2
+    def _publish_cycle(self):
+        t, angles = sample_cycle(self.params, n_samples=self.n_samples)
 
         msg = JointTrajectory()
-        msg.joint_names = self.joints
+        msg.joint_names = list(ALL_JOINTS)
+        # small lead time so the controller has a moment to receive/queue
+        # this message before the first point is due
+        start_delay = 0.1
+        for i in range(self.n_samples):
+            pt = JointTrajectoryPoint()
+            pt.positions = self._full_positions(angles, i)
+            pt.time_from_start = Duration(seconds=float(t[i]) + start_delay).to_msg()
+            msg.points.append(pt)
+        # repeat the first point at the end (closes the loop cleanly)
+        pt_end = JointTrajectoryPoint()
+        pt_end.positions = self._full_positions(angles, 0)
+        pt_end.time_from_start = Duration(seconds=self.params.cycle_period + start_delay).to_msg()
+        msg.points.append(pt_end)
 
-        point = JointTrajectoryPoint()
-        point.positions = [
-            shoulderR,
-            elbowR,
-            shoulderL,
-            elbowL,
-            0.0,     # neck: keep the head level
-            waistR,
-            kneeR,
-            waistL,
-            kneeL
-        ]
-
-        point.time_from_start.sec = 0
-        point.time_from_start.nanosec = int(self.dt * 1e9)
-
-        msg.points.append(point)
-        self.publisher.publish(msg)
-
-        self.t = (self.t + self.dt) % step_period
-        self.elapsed += self.dt
+        self.pub.publish(msg)
+        self.get_logger().debug(f"Published gait cycle ({self.n_samples + 1} points, {self.params.cycle_period:.1f}s)")
 
 
-def main(args=None):
-
-    rclpy.init(args=args)
-
-    node = WalkingController()
-
+def main():
+    rclpy.init()
+    node = WalkGaitNode()
     try:
         rclpy.spin(node)
-
     except KeyboardInterrupt:
         pass
+    finally:
+        node.destroy_node()
+        rclpy.shutdown()
 
-    node.destroy_node()
-    rclpy.shutdown()
 
-
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()

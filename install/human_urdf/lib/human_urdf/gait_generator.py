@@ -1,0 +1,1 @@
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf/scripts/gait_generator.py

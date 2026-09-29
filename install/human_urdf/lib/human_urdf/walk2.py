@@ -1,0 +1,1 @@
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/src/human_urdf/scripts/walk2.py

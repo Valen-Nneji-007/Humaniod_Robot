@@ -1,2 +1,1 @@
-source;share/human_urdf/environment/ament_prefix_path.sh
-source;share/human_urdf/environment/path.sh
+/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf/ament_cmake_environment_hooks/local_setup.dsv

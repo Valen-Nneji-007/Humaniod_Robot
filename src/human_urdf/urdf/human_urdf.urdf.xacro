@@ -220,6 +220,119 @@
 
   </joint>
 
+    <!-- ==================== RIGHT GRIPPER 1 ==================== -->
+  <link name="GripR1_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="3.23e-06"/>
+      <inertia
+        ixx="1.0e-10"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="1.0e-10"
+        iyz="0.0"
+        izz="1.0e-10"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripR1_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripR1_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_GripR1" type="revolute">
+
+  <origin
+    xyz="-0.24506 -0.0024824 -0.14417"
+    rpy="0.54935 0 -1.5708"/>
+
+  <parent link="elbowR_link"/>
+  <child link="GripR1_link"/>
+
+  <axis xyz="0 0 -1"/>
+
+  <limit
+    lower="-0.1"
+    upper="1.0"
+    effort="10.0"
+    velocity="1.0"/>
+
+</joint>
+
+
+  <!-- ==================== RIGHT GRIPPER 2 ==================== -->
+  <link name="GripR2_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="3.23e-06"/>
+      <inertia
+        ixx="1.0e-10"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="1.0e-10"
+        iyz="0.0"
+        izz="1.0e-10"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripR2_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripR2_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_GripR2" type="revolute">
+    <origin
+      xyz="-0.24506 -0.027518 -0.14417"
+      rpy="0.54935 0 -1.5708"/>
+
+    <parent link="elbowR_link"/>
+    <child link="GripR2_link"/>
+
+    <axis xyz="0 0 -1"/>
+
+    <limit
+      lower="-0.1"
+      upper="1.0"
+      effort="10.0"
+      velocity="1.0"/>
+    
+    <mimic
+      joint="joint_GripR1"
+      multiplier="-1"
+      offset="0"/>
+  </joint>
+
+
+  
+
+
+
 
   <!-- ============================================================ -->
   <!-- LEFT SHOULDER                                                  -->
@@ -357,6 +470,119 @@
       velocity="5" />
 
   </joint>
+
+
+    <!-- ==================== LEFT GRIPPER 1 ==================== -->
+  <link name="GripL1_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="3.23e-06"/>
+      <inertia
+        ixx="1.0e-10"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="1.0e-10"
+        iyz="0.0"
+        izz="1.0e-10"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripL1_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripL1_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_GripL1" type="revolute">
+    <origin
+      xyz="-0.20265 -0.027518 0.19943"
+      rpy="-2.3466 0 1.5708"/>
+
+    <parent link="elbowL_link"/>
+    <child link="GripL1_link"/>
+
+    <axis xyz="0 0 -1"/>
+
+    <limit
+      lower="-0.016"
+      upper="1.0"
+      effort="10.0"
+      velocity="1.0"/>
+
+  
+  </joint>
+
+    <!-- ==================== LEFT GRIPPER 2 ==================== -->
+  <link name="GripL2_link">
+    <inertial>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <mass value="3.23e-06"/>
+      <inertia
+        ixx="1.0e-10"
+        ixy="0.0"
+        ixz="0.0"
+        iyy="1.0e-10"
+        iyz="0.0"
+        izz="1.0e-10"/>
+    </inertial>
+
+    <visual>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripL2_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </visual>
+
+    <collision>
+      <origin xyz="0 0 0" rpy="0 0 0"/>
+      <geometry>
+        <mesh
+          filename="package://human_urdf/meshes/GripL2_link.STL"
+          scale="10.0 10.0 10.0"/>
+      </geometry>
+    </collision>
+  </link>
+
+  <joint name="joint_GripL2" type="revolute">
+    <origin
+      xyz="-0.20265 -0.0024824 0.19943"
+      rpy="-2.3466 0 1.5708"/>
+
+    <parent link="elbowL_link"/>
+    <child link="GripL2_link"/>
+
+    <axis xyz="0 0 -1"/>
+
+    <limit
+      lower="-0.016"
+      upper="1.0"
+      effort="10.0"
+      velocity="1.0"/>
+
+    
+    <mimic
+      joint="joint_GripL1"
+      multiplier="-1"
+      offset="0"/>
+  </joint>
+
+
+
+  
 
 
   <!-- ============================================================ -->

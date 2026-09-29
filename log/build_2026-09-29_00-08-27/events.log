@@ -1,0 +1,147 @@
+[0.000000] (-) TimerEvent: {}
+[0.001081] (-) JobUnselected: {'identifier': 'human_controller'}
+[0.005611] (human_urdf) JobQueued: {'identifier': 'human_urdf', 'dependencies': OrderedDict()}
+[0.008370] (human_urdf) JobStarted: {'identifier': 'human_urdf'}
+[0.097326] (-) TimerEvent: {}
+[0.214345] (-) TimerEvent: {}
+[0.327525] (-) TimerEvent: {}
+[0.334950] (human_urdf) JobProgress: {'identifier': 'human_urdf', 'progress': 'cmake'}
+[0.422740] (human_urdf) JobProgress: {'identifier': 'human_urdf', 'progress': 'build'}
+[0.427669] (-) TimerEvent: {}
+[0.439430] (human_urdf) Command: {'cmd': ['/usr/bin/cmake', '--build', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf', '--', '-j8', '-l8'], 'cwd': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'valenhumble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/valenhumble'), ('CYCLONEDDS_URI', 'file:///home/valenhumble/cyclone_config.xml'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'valenhumble'), ('NAME', 'DESKTOP-1ULGF16'), ('WSL_INTEROP', '/run/WSL/80504_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/lib/ccache:/mnt/c/Users/Administrator/Documents/Mechanical/drone/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/valenhumble/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/ProgramData/miniconda3:/mnt/c/ProgramData/miniconda3/Library/mingw-w64/bin:/mnt/c/ProgramData/miniconda3/Library/usr/bin:/mnt/c/ProgramData/miniconda3/Library/bin:/mnt/c/ProgramData/miniconda3/Scripts:/mnt/c/ProgramData/miniconda3/bin:/mnt/c/ProgramData/miniconda3/condabin:/mnt/c/Program Files/BellSoft/LibericaJDK-25/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/PuTTY:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.3.0:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/usbipd-win:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python39/Scripts:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python39:/mnt/c/Users/Administrator/.pyenv/pyenv-win/bin:/mnt/c/Users/Administrator/.pyenv/pyenv-win/shims:/mnt/c/Users/Administrator/.pyenv/pyenv-win/bin:/mnt/c/Users/Administrator/.pyenv/pyenv-win/shims:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python313:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Launcher:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Administrator/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/Administrator/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Administrator/AppData/Local/Kingsoft/WPS Office/12.1.0.27458/clitool:/mnt/c/Users/Administrator/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/mnt/c/Users/Administrator/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/snap/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/mnt/c/Users/Administrator/Documents/Mechanical/drone/Micro-XRCE-DDS-Gen/scripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('RWM_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '2'), ('AMENT_PREFIX_PATH', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf:/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_MODEL_DATABASE_URI', ''), ('PWD', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf'), ('QT_QPA_PLATFORM', 'xcb'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf:/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[0.528926] (-) TimerEvent: {}
+[0.653072] (-) TimerEvent: {}
+[0.776735] (-) TimerEvent: {}
+[0.883903] (-) TimerEvent: {}
+[1.006976] (-) TimerEvent: {}
+[1.114079] (-) TimerEvent: {}
+[1.184367] (human_urdf) CommandEnded: {'returncode': 0}
+[1.214271] (-) TimerEvent: {}
+[1.236958] (human_urdf) JobProgress: {'identifier': 'human_urdf', 'progress': 'install'}
+[1.275698] (human_urdf) Command: {'cmd': ['/usr/bin/cmake', '--install', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf'], 'cwd': '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('USER', 'valenhumble'), ('SHLVL', '1'), ('LD_LIBRARY_PATH', '/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib'), ('HOME', '/home/valenhumble'), ('CYCLONEDDS_URI', 'file:///home/valenhumble/cyclone_config.xml'), ('LIBGL_DRI3_DISABLE', '1'), ('ROS_PYTHON_VERSION', '3'), ('DBUS_SESSION_BUS_ADDRESS', 'unix:path=/run/user/1000/bus'), ('WSL_DISTRO_NAME', 'Ubuntu-22.04'), ('WAYLAND_DISPLAY', 'wayland-0'), ('COLCON_PREFIX_PATH', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install'), ('ROS_DISTRO', 'humble'), ('LOGNAME', 'valenhumble'), ('NAME', 'DESKTOP-1ULGF16'), ('WSL_INTEROP', '/run/WSL/80504_interop'), ('PULSE_SERVER', 'unix:/mnt/wslg/PulseServer'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('TERM', 'xterm-256color'), ('GAZEBO_MODEL_PATH', ':/opt/ros/humble/share/turtlebot3_gazebo/models'), ('ROS_LOCALHOST_ONLY', '0'), ('PATH', '/usr/lib/ccache:/mnt/c/Users/Administrator/Documents/Mechanical/drone/ardupilot/Tools/autotest:/opt/gcc-arm-none-eabi-10-2020-q4-major/bin:/home/valenhumble/.local/bin:/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/ProgramData/miniconda3:/mnt/c/ProgramData/miniconda3/Library/mingw-w64/bin:/mnt/c/ProgramData/miniconda3/Library/usr/bin:/mnt/c/ProgramData/miniconda3/Library/bin:/mnt/c/ProgramData/miniconda3/Scripts:/mnt/c/ProgramData/miniconda3/bin:/mnt/c/ProgramData/miniconda3/condabin:/mnt/c/Program Files/BellSoft/LibericaJDK-25/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/bin:/mnt/c/Program Files/NVIDIA GPU Computing Toolkit/CUDA/v12.6/libnvvp:/mnt/c/Program Files (x86)/NVIDIA Corporation/PhysX/Common:/mnt/c/Program Files (x86)/Common Files/Intel/Shared Libraries/redist/intel64/compiler:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0:/mnt/c/Windows/System32/OpenSSH:/mnt/c/Program Files/MATLAB/R2024b/bin:/mnt/c/Program Files/Microsoft SQL Server/Client SDK/ODBC/170/Tools/Binn:/mnt/c/Program Files (x86)/Microsoft SQL Server/150/Tools/Binn:/mnt/c/Program Files/Microsoft SQL Server/150/Tools/Binn:/mnt/c/Program Files/Microsoft SQL Server/150/DTS/Binn:/mnt/c/Program Files (x86)/Windows Kits/8.1/Windows Performance Toolkit:/mnt/c/Program Files/dotnet:/mnt/c/Program Files/PuTTY:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/Program Files/NVIDIA Corporation/NVIDIA App/NvDLISR:/mnt/c/Program Files (x86)/Windows Kits/10/Windows Performance Toolkit:/mnt/c/Program Files/NVIDIA Corporation/Nsight Compute 2024.3.0:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/usbipd-win:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python39/Scripts:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python39:/mnt/c/Users/Administrator/.pyenv/pyenv-win/bin:/mnt/c/Users/Administrator/.pyenv/pyenv-win/shims:/mnt/c/Users/Administrator/.pyenv/pyenv-win/bin:/mnt/c/Users/Administrator/.pyenv/pyenv-win/shims:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python313/Scripts:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Python313:/mnt/c/Users/Administrator/AppData/Local/Programs/Python/Launcher:/mnt/c/Users/Administrator/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/Administrator/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/msys64/ucrt64/bin:/mnt/c/Users/Administrator/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/Administrator/AppData/Local/Kingsoft/WPS Office/12.1.0.27458/clitool:/mnt/c/Users/Administrator/.vscode/extensions/ms-python.debugpy-2026.6.0-win32-x64/bundled/scripts/noConfigScripts:/mnt/c/Users/Administrator/AppData/Roaming/Code/User/globalStorage/github.copilot-chat/debugCommand:/snap/bin:/opt/xtensa-esp-elf/bin/:/opt/xtensa-esp-elf/bin/:/mnt/c/Users/Administrator/Documents/Mechanical/drone/Micro-XRCE-DDS-Gen/scripts'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('DISPLAY', ':0'), ('LANG', 'en_US.UTF-8'), ('RWM_IMPLEMENTATION', 'rmw_cyclonedds_cpp'), ('RMW_IMPLEMENTATION', 'rmw_fastrtps_cpp'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('ROS_DOMAIN_ID', '2'), ('AMENT_PREFIX_PATH', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf:/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller:/opt/ros/humble'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('GAZEBO_MODEL_DATABASE_URI', ''), ('PWD', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/build/human_urdf'), ('QT_QPA_PLATFORM', 'xcb'), ('TURTLEBOT3_MODEL', 'waffle'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages'), ('COLCON', '1'), ('WSL2_GUI_APPS_ENABLED', '1'), ('HOSTTYPE', 'x86_64'), ('CMAKE_PREFIX_PATH', '/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf:/mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_controller:/opt/ros/humble'), ('WSLENV', '')]), 'shell': False}
+[1.314406] (-) TimerEvent: {}
+[1.321502] (human_urdf) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[1.372630] (human_urdf) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[1.414602] (-) TimerEvent: {}
+[1.462633] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/human_urdf/walk2.py\n'}
+[1.514776] (-) TimerEvent: {}
+[1.553430] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/human_urdf/walk.py\n'}
+[1.614952] (-) TimerEvent: {}
+[1.656060] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/human_urdf/gait_generator.py\n'}
+[1.718990] (-) TimerEvent: {}
+[1.753292] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/lib/human_urdf/walk3.py\n'}
+[1.818778] (-) TimerEvent: {}
+[1.896714] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/config/joint_names_human_urdf.yaml\n'}
+[1.919120] (-) TimerEvent: {}
+[2.023352] (-) TimerEvent: {}
+[2.107638] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/launch/display.launch\n'}
+[2.123560] (-) TimerEvent: {}
+[2.225631] (-) TimerEvent: {}
+[2.244493] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/launch/display.launch.py\n'}
+[2.325840] (-) TimerEvent: {}
+[2.388097] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/launch/gazebo.launch.py\n'}
+[2.426201] (-) TimerEvent: {}
+[2.528107] (-) TimerEvent: {}
+[2.632151] (-) TimerEvent: {}
+[2.797894] (-) TimerEvent: {}
+[2.811731] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripL1_link.STL\n'}
+[2.898090] (-) TimerEvent: {}
+[2.978910] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripL2_link.STL\n'}
+[3.038546] (-) TimerEvent: {}
+[3.150401] (-) TimerEvent: {}
+[3.266876] (-) TimerEvent: {}
+[3.323151] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripR1_link.STL\n'}
+[3.367078] (-) TimerEvent: {}
+[3.445362] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/GripR2_link.STL\n'}
+[3.467255] (-) TimerEvent: {}
+[3.569687] (-) TimerEvent: {}
+[3.576003] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/base_link.STL\n'}
+[3.669780] (-) TimerEvent: {}
+[3.680946] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/elbowL_link.STL\n'}
+[3.756299] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/elbowR_link.STL\n'}
+[3.769925] (-) TimerEvent: {}
+[3.831107] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/kneeL_link.STL\n'}
+[3.871104] (-) TimerEvent: {}
+[3.932962] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/kneeR_link.STL\n'}
+[3.974375] (-) TimerEvent: {}
+[4.029010] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/neck_link.STL\n'}
+[4.074525] (-) TimerEvent: {}
+[4.131456] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/shoulderL_link.STL\n'}
+[4.174740] (-) TimerEvent: {}
+[4.238423] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/shoulderR_link.STL\n'}
+[4.274916] (-) TimerEvent: {}
+[4.338041] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/waistL_link.STL\n'}
+[4.375041] (-) TimerEvent: {}
+[4.462931] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/meshes/waistR_link.STL\n'}
+[4.475148] (-) TimerEvent: {}
+[4.576445] (-) TimerEvent: {}
+[4.639474] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_gazebo.xacro\n'}
+[4.676734] (-) TimerEvent: {}
+[4.732920] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_ros2_control.xacro\n'}
+[4.776862] (-) TimerEvent: {}
+[4.817329] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_urdf.csv\n'}
+[4.877022] (-) TimerEvent: {}
+[4.941195] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/urdf/human_urdf.urdf.xacro\n'}
+[4.977224] (-) TimerEvent: {}
+[5.065540] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/worlds/empty.sdf\n'}
+[5.077663] (-) TimerEvent: {}
+[5.180064] (-) TimerEvent: {}
+[5.257813] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/ament_index/resource_index/package_run_dependencies/human_urdf\n'}
+[5.280703] (-) TimerEvent: {}
+[5.398784] (-) TimerEvent: {}
+[5.513271] (-) TimerEvent: {}
+[5.672228] (-) TimerEvent: {}
+[5.681613] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/ament_index/resource_index/parent_prefix_path/human_urdf\n'}
+[5.750695] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/ament_prefix_path.sh\n'}
+[5.772355] (-) TimerEvent: {}
+[5.828685] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/ament_prefix_path.dsv\n'}
+[5.872552] (-) TimerEvent: {}
+[5.885644] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/path.sh\n'}
+[5.972723] (-) TimerEvent: {}
+[5.985891] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/environment/path.dsv\n'}
+[6.048887] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.bash\n'}
+[6.072939] (-) TimerEvent: {}
+[6.141899] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.sh\n'}
+[6.173058] (-) TimerEvent: {}
+[6.205194] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.zsh\n'}
+[6.273319] (-) TimerEvent: {}
+[6.282650] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/local_setup.dsv\n'}
+[6.307706] (human_urdf) StdoutLine: {'line': b'-- Symlinking: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.dsv\n'}
+[6.373536] (-) TimerEvent: {}
+[6.476603] (-) TimerEvent: {}
+[6.555289] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/ament_index/resource_index/packages/human_urdf\n'}
+[6.576760] (-) TimerEvent: {}
+[6.598876] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/cmake/human_urdfConfig.cmake\n'}
+[6.673051] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/cmake/human_urdfConfig-version.cmake\n'}
+[6.677976] (-) TimerEvent: {}
+[6.769590] (human_urdf) StdoutLine: {'line': b'-- Up-to-date symlink: /mnt/c/Users/Administrator/Documents/Mechanical/Humaniod/install/human_urdf/share/human_urdf/package.xml\n'}
+[6.778239] (-) TimerEvent: {}
+[6.786586] (human_urdf) CommandEnded: {'returncode': 0}
+[6.881522] (-) TimerEvent: {}
+[6.986620] (-) TimerEvent: {}
+[7.095665] (-) TimerEvent: {}
+[7.198421] (-) TimerEvent: {}
+[7.301500] (-) TimerEvent: {}
+[7.413784] (-) TimerEvent: {}
+[7.519241] (-) TimerEvent: {}
+[7.627026] (-) TimerEvent: {}
+[7.756532] (-) TimerEvent: {}
+[7.870417] (-) TimerEvent: {}
+[7.991018] (-) TimerEvent: {}
+[8.094294] (-) TimerEvent: {}
+[8.195867] (-) TimerEvent: {}
+[8.297056] (-) TimerEvent: {}
+[8.401075] (-) TimerEvent: {}
+[8.503424] (-) TimerEvent: {}
+[8.607922] (-) TimerEvent: {}
+[8.709263] (-) TimerEvent: {}
+[8.812946] (-) TimerEvent: {}
+[8.914672] (-) TimerEvent: {}
+[9.055095] (-) TimerEvent: {}
+[9.156468] (-) TimerEvent: {}
+[9.258788] (-) TimerEvent: {}
+[9.360513] (-) TimerEvent: {}
+[9.468261] (-) TimerEvent: {}
+[9.573970] (-) TimerEvent: {}
+[9.590965] (human_urdf) JobEnded: {'identifier': 'human_urdf', 'rc': 0}
+[9.619427] (-) EventReactorShutdown: {}
